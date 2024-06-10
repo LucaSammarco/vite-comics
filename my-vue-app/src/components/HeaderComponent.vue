@@ -28,7 +28,7 @@
     <header class="d-flex">
        
         <section class="logo">
-            <img src="../assets/img/dc-logo.png" alt="">
+            <img src="/img/dc-logo.png" alt="DC Logo">
         </section>
 
         <section class="navbar ms-auto">
