@@ -5,7 +5,7 @@
 
                 headerLinks: [
                 { title: 'Characters', id: 1, active: false },
-                { title: 'Comics', id: 2, active: false },
+                { title: 'Comics', id: 2, active: true },
                 { title: 'Movies', id: 3, active: false },
                 { title: 'TV', id: 4, active: false },
                 { title: 'Games', id: 5, active: false },
@@ -31,13 +31,13 @@
             <img src="../assets/img/dc-logo.png" alt="">
         </section>
 
-        <section class="navbar">
+        <section class="navbar ms-auto">
             
                 <nav>
-                    <ul>
+                    <ul class="d-flex ">
                      
-                        <li >
-                            {{ headerLinks[0] }}
+                        <li v-for="link in headerLinks" :key="link.id"  :class="(link.active) ? 'active' : '' "  class="me-4 text-uppercase fw-bold" >
+                            {{ link.title }}
                         </li>
 
                     </ul>
@@ -55,8 +55,27 @@
 
    @use '../styles/partials/variables' as *;
 
-   li.active{
-    background-color: $active-link-bg;
-   }
+   li {
+    list-style: none;
+   
+}
+
+li.active {
+    color: $active-link-bg;
+    position: relative; 
+ 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -150%; 
+        left: 0;
+        width: 100%;
+        border-bottom: 7px solid $active-link-bg;
+    }
+}
+
+
+
+    
     
 </style>
