@@ -1,4 +1,6 @@
 <script>
+
+import ListProducts from './ListProducts.vue';
 export default {
     data() {
         return {
@@ -31,6 +33,14 @@ export default {
             ]
         };
     },
+
+    components: {
+        ListProducts
+    },
+
+    props: {
+        messaggio: String,
+    },
     
 };
 </script>
@@ -40,21 +50,28 @@ export default {
 <template>
     <main class="d-flex flex-column">
 
-        <div class="main-content bg-dark text-white">
-            <h2 class="ps-">--> Content goes here <--</h2>
+        <div class="jumbothrone h-50">
+            <img src="../../public/img/jumbotron.jpg" alt="jumbothrone" >
         </div>
 
-        <div class="images-container d-flex justify-content-center">
-            <div class="images align-items-center main-content">
+        <ListProducts/>
 
-                <ul class="d-flex p-0 m-0  align-items-center ">
-                    <li v-for="item in items" :key="item.id" class="image-item d-flex align-items-center list-unstyled me-5 mb-2">
-                        <img :src="item.url" :alt="item.text" class="me-2">
+        <div class="images-container d-flex justify-content-center">
+            <div class="images  main-content">
+
+                <ul class="d-flex p-0 m-0 justify-content-between p-3">
+                    <li v-for="item in items" :key="item.id" class="image-item d-flex align-items-center list-unstyled me-5 mb-2 p-">
+                        <img :src="item.url" :alt="item.text" class="me-3">
                         <span><p>{{ item.text }}</p></span>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <div><p> sdads {{ messaggio }}</p></div>
+
+        
+
     </main>
 </template>
 
@@ -74,6 +91,18 @@ export default {
     background-color: $dc-blue;
 }
 
+.jumbothrone {
+
+    img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+
+    }
+
+
+}
 
 .images {
     

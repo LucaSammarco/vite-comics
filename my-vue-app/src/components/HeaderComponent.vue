@@ -55,10 +55,22 @@
 
    @use '../styles/partials/variables' as *;
 
+   header {
+    padding: 1rem 15rem;
+}
+
+    .logo {
+        img {
+            width: 80px;
+        }
+    }
+
    li {
     list-style: none;
    
 }
+
+
 
 li.active {
     color: $active-link-bg;
@@ -67,7 +79,7 @@ li.active {
     &::after {
         content: '';
         position: absolute;
-        bottom: -150%; 
+        bottom: -220%; 
         left: 0;
         width: 100%;
         border-bottom: 7px solid $active-link-bg;

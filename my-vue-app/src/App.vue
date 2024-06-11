@@ -1,17 +1,30 @@
-<script setup>
+<script >
 
   import HeaderComponent from './components/HeaderComponent.vue';
   import MainComponent from './components/MainComponent.vue';
   import FooterComponent from './components/FooterComponent.vue';
 
-
+  export default {
+    data(){
+      return{
+        message: "benvenuti"
+      }
+    }, 
+    
+    components:{
+    HeaderComponent,
+    MainComponent,
+    FooterComponent
+  }
+ 
+  }
  
 
 </script>
 
 <template>
   <HeaderComponent></HeaderComponent>
-  <MainComponent></MainComponent>
+  <MainComponent :messaggio="message"></MainComponent>
   <FooterComponent/>
 </template>
 
