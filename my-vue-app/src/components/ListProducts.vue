@@ -111,7 +111,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 3rem 10rem;
-  background-color: #1a1a1a;
+  background-color: #1c1c1c;
  
 }
 
@@ -119,7 +119,7 @@
 .cards {
     width: calc((100% / 6)); 
     text-align: center;
-    
+    margin-bottom: 1rem;
  }
 
 
@@ -131,8 +131,9 @@
 
 .cards h4 {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 0.9rem;
   color: white;
+  text-transform: uppercase;
 }
 
 

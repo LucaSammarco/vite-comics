@@ -55,14 +55,20 @@
 
    @use '../styles/partials/variables' as *;
 
-   header {
-    padding: 1rem 15rem;
-}
+//    header {
+//     padding: 1remem;
+// }
 
     .logo {
+
+        padding: 1rem 10rem;
         img {
             width: 80px;
         }
+    }
+
+    .navbar {
+        padding: 1rem 6rem;
     }
 
    li {

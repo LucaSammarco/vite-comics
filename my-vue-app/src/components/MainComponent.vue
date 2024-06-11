@@ -52,23 +52,37 @@ export default {
 
         <div class="jumbothrone h-50">
             <img src="../../public/img/jumbotron.jpg" alt="jumbothrone" >
+            <div>
+             <p class="series">current series</p>
+            </div>
+
+
         </div>
 
         <ListProducts/>
+
+        <div class="button-container">
+
+            <button type="button" class="bottone btn ">Load More</button>
+
+        </div>
+
 
         <div class="images-container d-flex justify-content-center">
             <div class="images  main-content">
 
                 <ul class="d-flex p-0 m-0 justify-content-between p-3">
-                    <li v-for="item in items" :key="item.id" class="image-item d-flex align-items-center list-unstyled me-5 mb-2 p-">
+                    <li v-for="item in items" :key="item.id" class="image-item d-flex align-items-center list-unstyled me-5 mb-3 p-">
+
                         <img :src="item.url" :alt="item.text" class="me-3">
                         <span><p>{{ item.text }}</p></span>
+
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div><p> sdads {{ messaggio }}</p></div>
+
 
         
 
@@ -93,12 +107,26 @@ export default {
 
 .jumbothrone {
 
+    position: relative;
+
     img {
         height: 300px;
         width: 100%;
         object-fit: cover;
         object-position: top;
 
+    }
+
+    .series {
+        background-color: $dc-blue;
+        position: absolute;
+        left: 10rem;
+        bottom: -2rem;
+        text-transform: uppercase;
+        color: white;
+        padding: 0.2rem 1.5rem;
+        font-weight: bold;
+        font-size: 1.1rem;
     }
 
 
@@ -140,5 +168,26 @@ export default {
         white-space: nowrap;
     }
 }
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    background-color: #1c1c1c;
+    padding-bottom: 2rem;
+    
+    .bottone {
+        padding: 0.2rem 4rem;
+        margin-bottom: 0.5rem;
+        font-family: 'Roboto' sans-serif !important ;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 0;
+        background-color: $dc-blue;
+        color: white;
+    }
+}
+
+
 
 </style>
